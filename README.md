@@ -59,10 +59,14 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 
 > 👀 **Nota**: Puedes utilizar filtros para ordenar las mascotas por estado, pues la lista es muy larga y la API está constantemente registrando mascotas.
 
+![Lista Mascotas](https://i.postimg.cc/8c5KNY2b/Screenshot-2025-01-14-at-4-25-23-PM.png)
+
 ### 4. Consultar el Inventario de la Tienda
 
 1. Ve a la pestaña Inventario.
 2. Observa la cantidad de mascotas disponibles, clasificadas por estado (“Disponible”, “Pendiente”, etc.).
+
+![Inventario Tienda](https://i.postimg.cc/tCsScLtq/Screenshot-2025-01-14-at-4-25-15-PM.png)
 
 ### 5. Crear una Orden para Comprar una Mascota
 
