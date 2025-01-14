@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-petstore/static/css/main.e4597037.css",
+    "main.js": "/react-petstore/static/js/main.5349f4df.js",
+    "index.html": "/react-petstore/index.html",
+    "main.e4597037.css.map": "/react-petstore/static/css/main.e4597037.css.map",
+    "main.5349f4df.js.map": "/react-petstore/static/js/main.5349f4df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4597037.css",
+    "static/js/main.5349f4df.js"
+  ]
+}
