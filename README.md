@@ -33,6 +33,8 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 3. Presiona el botón Guardar. 🎉
 4. Aparecerá un mensaje de éxito confirmando que la mascota se creó correctamente.
 
+![Crear Mascota](https://i.postimg.cc/0yZmxNC7/Screenshot-2025-01-14-at-4-11-43-PM.png)
+
 > 👀 **Nota**: Si olvidas algún campo, la aplicación te lo notificará para que puedas completarlo antes de guardar.
 
 ### 2. Actualizar los Datos de una Mascota
@@ -44,6 +46,8 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 5. Modifica los campos necesarios (nombre o estado).
 6. Haz clic en "**Actualizar**".
 7. Aparecerá un mensaje confirmando los cambios. 🎉
+
+![Actualizar Mascota](https://i.postimg.cc/NftvvGFs/Screenshot-2025-01-14-at-4-21-20-PM.png)
 
 ### 3. Ver la Lista de Mascotas
 
@@ -68,6 +72,8 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 5. Llena los campos necesarios (nombre y fecha de entrega).
 3. Haz clic en el botón "**Comprar**".
 4. Aparecerá un mensaje de confirmación con el éxito de la compra. ✨
+
+![Crear Orden](https://i.postimg.cc/hjhPxDTW/Screenshot-2025-01-14-at-4-23-36-PM.png)
 
 > 👀 **Nota**: Ten en cuenta que, dependiendo de la disponibilidad, algunas mascotas podrían no estar disponibles para su compra en ese momento.
 
