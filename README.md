@@ -315,5 +315,5 @@ sequenceDiagram
 > 🤓☝🏻 **Explicación**: El usuario ingresa los datos en el formulario de la aplicación frontend, que luego envía una solicitud a la API. La API procesa la información y confirma el éxito, lo que se refleja en la interfaz del usuario.
 
 ## 🚨 Notas y Consejos Adicionales
-- **Seguridad**: La aplicación está diseñada para ser intuitiva y fácil de usar, pero recuerda ingresar datos sensibles, pues es una API pública que está en uso recurrentemente.
+- **Seguridad**: La aplicación está diseñada para ser intuitiva y fácil de usar, pero recuerda **no** ingresar datos sensibles, pues es una API pública que está en uso recurrentemente.
 - **Actualizaciones**: Si realizas cambios en los datos de una mascota, asegúrate de guardar los cambios antes de navegar a otra sección.
