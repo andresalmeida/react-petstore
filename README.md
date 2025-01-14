@@ -300,3 +300,10 @@ sequenceDiagram
 - **Seguridad**: La aplicación está diseñada para ser intuitiva y fácil de usar, pero recuerda ingresar datos sensibles, pues es una API pública que está en uso recurrentemente.
 - **Actualizaciones**: Si realizas cambios en los datos de una mascota, asegúrate de guardar los cambios antes de navegar a otra sección.
 
+## 💁🏻 **¿Buscas la versión interactiva?**
+ - Este README está disponible en dos formatos:
+   - [Versión GitHub](https://github.com/andresalmeida/react-petstore/README.md) (estás aquí)
+   - [Versión HTML con demo interactiva](https://andresalmeida.github.io/react-petstore/docs)
+ - La versión HTML incluye una vista previa en vivo de la aplicación y elementos interactivos adicionales.
+
+
