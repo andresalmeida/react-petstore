@@ -1,0 +1,169 @@
+/* styles/App.css */
+.App {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.app-header {
+  background-color: #ff6f61; /* Color vibrante, ideal para una página divertida */
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 3px solid #ff4c39;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-header .tagline {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tab-button {
+  background-color: #fff;
+  color: #ff6f61;
+  padding: 12px 20px;
+  border: 2px solid #ff6f61;
+  border-radius: 25px 25px 0 0;
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.tab-button.active {
+  background-color: #ff4c39;
+  color: white;
+  box-shadow: 0px 2px 10px rgba(255, 76, 57, 0.3);
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Mejorar la presentación de la lista de mascotas */
+.pet-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas para una mejor distribución */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pet-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.pet-item:hover {
+  transform: translateY(-10px); /* Efecto hover de elevación */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pet-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pet-item h3 {
+  font-size: 20px;
+  color: #ff6f61;
+  margin: 10px 0;
+}
+
+.pet-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+.pet-item .status {
+  background-color: #ffec65;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Mejorar el estilo del inventario */
+.inventory-item {
+  background-color: #fffcf2;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid #ff6f61;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.inventory-item:hover {
+  background-color: #ffebd6;
+  border-color: #ff4c39;
+}
+
+.inventory-item h3 {
+  font-size: 24px;
+  color: #ff6f61;
+  margin: 0;
+}
+
+.inventory-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+.inventory-item .inventory-btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inventory-item .inventory-btn:hover {
+  background-color: #ff4c39;
+}
