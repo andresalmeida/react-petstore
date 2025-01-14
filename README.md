@@ -70,7 +70,138 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 
 > 👀 **Nota**: Ten en cuenta que, dependiendo de la disponibilidad, algunas mascotas podrían no estar disponibles para su compra en ese momento.
 
+## 💻 Ejemplos de Código
+
+Estos componentes React muestran la implementación de las principales funcionalidades de la aplicación. Cada componente utiliza estados (useState) para manejar los datos del formulario y modales de confirmación.
+
+### Crear Mascota (CreatePet.js)
+
+Este componente maneja la creación de nuevas mascotas. Utiliza un formulario simple con campos para el nombre y el estado de la mascota. Al crear exitosamente, muestra un modal de confirmación con el nombre de la mascota creada.
+
+```javascript
+// Crear Mascota
+
+const CreatePet = () => {
+  const [name, setName] = useState("");
+  const [status, setStatus] = useState("available");
+  const [showModal, setShowModal] = useState(false); // Estado para mostrar/ocultar el modal
+  const [petName, setPetName] = useState(""); // Almacena el nombre de la mascota creada
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const pet = { name, status };
+    try {
+      const response = await createPet(pet);
+      setPetName(response.name); // Guarda el nombre de la mascota creada
+      setShowModal(true); // Muestra el modal de confirmación
+    } catch (error) {
+      console.error("Error al crear la mascota:", error);
+    }
+  };
+```
+> ⚠️ **Nota**: El estado por defecto de una nueva mascota es "available" (disponible). Asegúrate de que el nombre sea descriptivo y único para facilitar su identificación posterior.
+
+### Actualizar Mascota (UpdatePet.js)
+
+Permite modificar los datos de una mascota existente usando su ID. Los usuarios pueden actualizar tanto el nombre como el estado de la mascota. Incluye validación del ID y confirmación visual de la actualización.
+
+```javascript
+// Actualizar Mascota
+
+const UpdatePet = () => {
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [status, setStatus] = useState("available");
+  const [showModal, setShowModal] = useState(false); // Estado para mostrar/ocultar el modal
+  const [petName, setPetName] = useState(""); // Almacena el nombre de la mascota actualizada
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const pet = { id: parseInt(id), name, status };
+    try {
+      const response = await updatePet(pet);
+      setPetName(response.name); // Guarda el nombre de la mascota actualizada
+      setShowModal(true); // Muestra el modal de confirmación
+    } catch (error) {
+      console.error("Error al actualizar la mascota:", error);
+    }
+  };
+```
+> ⚠️ **Nota**: Es crucial ingresar un ID válido de una mascota existente. Si el ID no existe, la aplicación mostrará un error.
+
+### Crear Orden (CreateOrder.js)
+
+Este componente gestiona la creación de órdenes de compra. Incluye verificación de disponibilidad de la mascota, manejo de fechas de entrega y validación del estado de la mascota antes de procesar la orden.
+
+```javascript
+// Crear Orden
+
+const BASE_URL = "https://petstore.swagger.io/v2";
+
+const CreateOrder = () => {
+  const [petId, setPetId] = useState("");
+  const [deliveryDate, setDeliveryDate] = useState(""); // Nueva fecha de entrega
+  const [showModal, setShowModal] = useState(false);
+  const [orderId, setOrderId] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const checkPetAvailability = async (id) => {
+    try {
+      const response = await fetch(`${BASE_URL}/pet/${id}`);
+      if (!response.ok) {
+        throw new Error(`Mascota no encontrada o error al consultar: ${response.statusText}`);
+      }
+      const pet = await response.json();
+      return pet.status === "available";
+    } catch (error) {
+      console.error("Error al verificar el estado de la mascota:", error);
+      setErrorMessage("Error al verificar el estado de la mascota. Inténtelo de nuevo.");
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMessage("");
+    const isAvailable = await checkPetAvailability(petId);
+
+    if (!isAvailable) {
+      setErrorMessage("La mascota no está disponible para la compra.");
+      return;
+    }
+
+    const order = {
+      petId: parseInt(petId),
+      deliveryDate, // Incluimos la fecha de entrega
+      status: "placed",
+    };
+
+    try {
+      const response = await createOrder(order);
+      setOrderId(response.id);
+      setShowModal(true);
+    } catch (error) {
+      console.error("Error al crear la orden:", error);
+      setErrorMessage("Error al crear la orden. Inténtelo de nuevo.");
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setPetId("");
+    setDeliveryDate("");
+    setErrorMessage("");
+  };
+```
+> ⚠️ **Nota**
+> - La fecha de entrega es obligatoria
+> - Si la mascota no está disponible, se mostrará un mensaje de error
+> - Las órdenes creadas exitosamente reciben un ID único de confirmación
+> - El componente limpia automáticamente el formulario después de una orden exitosa
+
 ## 🎨 Diagramas Explicativos
+
+Los diagramas que se muestran a continuación, muestran cómo se encuentra desarrollada la aplicación, por ello, servirán de guía para entender cómo fue implementada en el aplicativo usando React.
 
 ### Diagrama de Componentes
 
