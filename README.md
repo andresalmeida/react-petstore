@@ -18,8 +18,9 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 ## 🔍 Cómo Acceder a la Aplicación
 
 1. Abre tu navegador favorito (Google Chrome, Firefox, Edge, etc.).
-2. Dirígete a la siguiente URL: [Api Mascotitas](https://andresalmeida.github.io/react-petstore/)
-3. Asegúrate de contar con conexión a internet estable.
+2. Dirígete a la siguiente URL: [Api Mascotitas](https://andresalmeida.github.io/react-petstore/) - GitHub Pages 👾
+3. O, si prefieres, dirígete a la siguiente URL: [Api Mascotitas](https://fhsl9f-3000.csb.app/) - CodeSandBox 📎
+4. Asegúrate de contar con conexión a internet estable.
 
 ## 📖 Guía Paso a Paso
 
