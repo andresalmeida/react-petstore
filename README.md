@@ -71,7 +71,7 @@ La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API
 ### 5. Crear una Orden para Comprar una Mascota
 
 1. En la lista de mascotas, selecciona la mascota que deseas comprar.
-2. 3. Copia el **ID** de la mascota que deseas editar.
+2. Copia el **ID** de la mascota que deseas editar.
 4. Ve a la pestaña "**Crear Orden**".
 5. Llena los campos necesarios (nombre y fecha de entrega).
 3. Haz clic en el botón "**Comprar**".
