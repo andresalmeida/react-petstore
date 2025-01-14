@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+# 🐶 Guía de Usuario: Gestionando Mascotas en la PetStore API 🐱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ **Bienvenido al Sistema de Gestión de Mascotas** ✨
 
-## Available Scripts
+Esta guía te proporcionará los pasos necesarios para usar nuestra aplicación desplegada. Desde registrar nuevas mascotas hasta gestionar pedidos de compra, esta guía te ayudará en cada acción que necesites realizar.
 
-In the project directory, you can run:
+## 🏠 Introducción al Producto
 
-### `npm start`
+Nuestra aplicación está diseñada para:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Crear y actualizar datos de mascotas.
+- Consultar el inventario disponible en la tienda.
+- Realizar pedidos de compra de mascotas.
+- Gestionar las acciones de manera sencilla y rápida.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La aplicación se basa en tecnologías modernas como React, TailwindCSS y la API de PetStore.
 
-### `npm test`
+## 🔍 Cómo Acceder a la Aplicación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Abre tu navegador favorito (Google Chrome, Firefox, Edge, etc.).
+2. Dirígete a la siguiente URL: [Api Mascotitas](https://andresalmeida.github.io/react-petstore/)
+3. Asegúrate de contar con conexión a internet estable.
 
-### `npm run build`
+## 📖 Guía Paso a Paso
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Crear una Mascota Nueva
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Haz clic en la pestaña Crear Mascota en el menú principal.
+2. Rellena el formulario con los siguientes datos:
+   - Nombre de la mascota (Ej.: “Firulais”).
+   - Estado (“Disponible”, “Vendido” o “Pendiente”).
+3. Presiona el botón Guardar. 🎉
+4. Aparecerá un mensaje de éxito confirmando que la mascota se creó correctamente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> 👀 **Nota**: Si olvidas algún campo, la aplicación te lo notificará para que puedas completarlo antes de guardar.
 
-### `npm run eject`
+### 2. Actualizar los Datos de una Mascota
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Ve a la pestaña "**Lista de Mascotas**".
+2. Identifica la mascota que deseas actualizar.
+3. Copia el **ID** de la mascota que deseas editar.
+4. Ve a la pestaña "**Actualizar Mascota**".
+5. Modifica los campos necesarios (nombre o estado).
+6. Haz clic en "**Actualizar**".
+7. Aparecerá un mensaje confirmando los cambios. 🎉
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Ver la Lista de Mascotas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Haz clic en la pestaña Lista de Mascotas.
+2. Verás un listado con todas las mascotas registradas, incluyendo su:
+   - **ID**: Identificador único de la mascota.
+   - **Nombre**: Nombre de la mascota.
+   - **Estado**: Estado actual de la mascota ("Disponible", "Vendido", "Pendiente").'
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> 👀 **Nota**: Puedes utilizar filtros para ordenar las mascotas por estado, pues la lista es muy larga y la API está constantemente registrando mascotas.
 
-## Learn More
+### 4. Consultar el Inventario de la Tienda
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Ve a la pestaña Inventario.
+2. Observa la cantidad de mascotas disponibles, clasificadas por estado (“Disponible”, “Pendiente”, etc.).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5. Crear una Orden para Comprar una Mascota
 
-### Code Splitting
+1. En la lista de mascotas, selecciona la mascota que deseas comprar.
+2. 3. Copia el **ID** de la mascota que deseas editar.
+4. Ve a la pestaña "**Crear Orden**".
+5. Llena los campos necesarios (nombre y fecha de entrega).
+3. Haz clic en el botón "**Comprar**".
+4. Aparecerá un mensaje de confirmación con el éxito de la compra. ✨
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> 👀 **Nota**: Ten en cuenta que, dependiendo de la disponibilidad, algunas mascotas podrían no estar disponibles para su compra en ese momento.
 
-### Analyzing the Bundle Size
+## 🎨 Diagramas Explicativos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Diagrama de Componentes
 
-### Making a Progressive Web App
+Este diagrama muestra cómo interactúan los principales componentes del sistema: la aplicación React y la API de PetStore.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```mermaid
+---
+config:
+  theme: forest
+  look: classic
+  layout: dagre
+---
+flowchart TD
+    subgraph ReactApp["Frontend fa:fa-code"]
+        Component1["Inventory.js"]
+        Component2["CreatePet.js"]
+        Component3["UpdatePet.js"]
+        Component4["PetList.js"]
+        Component5["CreateOrder.js"]
+    end
+    ReactApp -- HTTP Requests --> API["API PetStore fa:fa-server"]
+    API -- JSON Responses --> ReactApp
+```
+> 🤓☝🏻 **Explicación**: La aplicación React se encarga de la interfaz de usuario (UI), y se comunica con la API para enviar y recibir datos en formato JSON. Este flujo asegura que la información esté siempre actualizada.
 
-### Advanced Configuration
+### Diagrama de Clases
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este diagrama muestra la estructura de las clases utilizadas en la aplicación, que interactúan entre sí para gestionar las mascotas y las órdenes de compra.
 
-### Deployment
+```mermaid
+---
+config:
+  theme: forest
+---
+classDiagram
+    class Pet {
+        <<Entity>>
+        +int id
+        +string name
+        +string status
+    }
+    class Order {
+        <<Entity>>
+        +int id
+        +int petId
+        +Date orderDate
+        +string status
+    }
+    class API {
+        <<Service>>
+        +getInventory() fa:fa-boxes
+        +createPet(Pet pet) fa:fa-paw
+        +updatePet(Pet pet) fa:fa-edit
+        +createOrder(Order order) fa:fa-shopping-cart
+    }
+    Pet <-- Order : "1,1"
+    API ..> Pet : "Manages"
+    API ..> Order : "Manages"
+```
+> 🤓☝🏻 **Explicación**
+> - La clase `Mascota` tiene los atributos que definen a cada mascota en el sistema, como `id`, `nombre`, `estado`, y métodos para crear, actualizar y eliminar mascotas.
+> - La clase `Orden` maneja los pedidos realizados por los clientes para comprar mascotas. Cada orden está vinculada a una mascota específica y tiene métodos para crear, actualizar o cancelar una orden.
+> - La clase `Inventario` maneja el listado de mascotas disponibles, permitiendo consultar y actualizar el inventario.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Diagrama de Secuencia
 
-### `npm run build` fails to minify
+El diagrama de secuencia a continuación muestra cómo se realiza la creación de una nueva mascota, desde que el usuario llena el formulario hasta que el sistema guarda la información.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```mermaid
+---
+config:
+  theme: forest
+---
+sequenceDiagram
+    participant User as Usuario
+    participant UI as Interfaz React
+    participant API as API PetStore
+    participant DB as Base de Datos
+    User->>UI: Ingresar ID de mascota
+    UI->>API: GET /pet/{id}
+    API->>DB: Consulta datos de la mascota
+    DB-->>API: Retorna datos de la mascota
+    API-->>UI: Retorna detalles de la mascota
+    UI->>User: Mostrar detalles en el formulario
+    User->>UI: Enviar formulario
+    UI->>API: POST /store/order
+    API->>DB: Registrar orden
+    DB-->>API: Confirmar registro
+    API-->>UI: Retornar confirmación de la orden
+    UI->>User: Mostrar mensaje de éxito
+```
+
+> 🤓☝🏻 **Explicación**: El usuario ingresa los datos en el formulario de la aplicación frontend, que luego envía una solicitud a la API. La API procesa la información y confirma el éxito, lo que se refleja en la interfaz del usuario.
+
+## 🚨 Notas y Consejos Adicionales
+- **Seguridad**: La aplicación está diseñada para ser intuitiva y fácil de usar, pero recuerda ingresar datos sensibles, pues es una API pública que está en uso recurrentemente.
+- **Actualizaciones**: Si realizas cambios en los datos de una mascota, asegúrate de guardar los cambios antes de navegar a otra sección.
+
