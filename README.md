@@ -199,6 +199,13 @@ const CreateOrder = () => {
 > - Las órdenes creadas exitosamente reciben un ID único de confirmación
 > - El componente limpia automáticamente el formulario después de una orden exitosa
 
+### 💁🏻 **¿Buscas la versión interactiva para probar la funcionalidad?**
+
+- Puedes [abrir la aplicación en una nueva ventana](https://fhsl9f-3000.csb.app/).
+- Este link te guiará a la vista previa interactiva de la aplicación en CodeSandbox.😼
+
+
+
 ## 🎨 Diagramas Explicativos
 
 Los diagramas que se muestran a continuación, muestran cómo se encuentra desarrollada la aplicación, por ello, servirán de guía para entender cómo fue implementada en el aplicativo usando React.
@@ -299,11 +306,3 @@ sequenceDiagram
 ## 🚨 Notas y Consejos Adicionales
 - **Seguridad**: La aplicación está diseñada para ser intuitiva y fácil de usar, pero recuerda ingresar datos sensibles, pues es una API pública que está en uso recurrentemente.
 - **Actualizaciones**: Si realizas cambios en los datos de una mascota, asegúrate de guardar los cambios antes de navegar a otra sección.
-
-## 💁🏻 **¿Buscas la versión interactiva?**
- - Este README está disponible en dos formatos:
-   - [Versión GitHub](https://github.com/andresalmeida/react-petstore/README.md) (estás aquí)
-   - [Versión HTML con demo interactiva](https://andresalmeida.github.io/react-petstore/docs)
- - La versión HTML incluye una vista previa en vivo de la aplicación y elementos interactivos adicionales.
-
-
