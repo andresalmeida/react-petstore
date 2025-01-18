@@ -228,18 +228,18 @@ Este diagrama muestra cómo interactúan los principales componentes del sistema
 ```mermaid
 ---
 config:
-  theme: forest
-  look: classic
+  theme: neo-dark
+  look: handDrawn
   layout: dagre
 ---
 flowchart TD
-    subgraph ReactApp["Frontend fa:fa-code"]
+ subgraph ReactApp["Frontend fa:fa-code"]
         Component1["Inventory.js"]
         Component2["CreatePet.js"]
         Component3["UpdatePet.js"]
         Component4["PetList.js"]
         Component5["CreateOrder.js"]
-    end
+  end
     ReactApp -- HTTP Requests --> API["API PetStore fa:fa-server"]
     API -- JSON Responses --> ReactApp
 ```
@@ -252,7 +252,9 @@ Este diagrama muestra la estructura de las clases utilizadas en la aplicación, 
 ```mermaid
 ---
 config:
-  theme: forest
+  theme: neo-dark
+  look: handDrawn
+  layout: elk
 ---
 classDiagram
     class Pet {
@@ -275,7 +277,7 @@ classDiagram
         +updatePet(Pet pet) fa:fa-edit
         +createOrder(Order order) fa:fa-shopping-cart
     }
-    Pet <-- Order : "1,1"
+    Pet <-- Order 
     API ..> Pet : "Manages"
     API ..> Order : "Manages"
 ```
@@ -291,7 +293,7 @@ El diagrama de secuencia a continuación muestra cómo se realiza la creación d
 ```mermaid
 ---
 config:
-  theme: forest
+  theme: neo-dark
 ---
 sequenceDiagram
     participant User as Usuario
